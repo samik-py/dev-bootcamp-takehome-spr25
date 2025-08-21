@@ -1,3 +1,80 @@
-/* Your Styles Here */
-body{
+body {
+  background-color: #2f3b41;
+  font-family: Arial, sans-serif;
+  color: #dbe5e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 0.4vh dashed #dbe5e8;
+  width: 80%;
+  margin-bottom: 2vh;
+  animation: dashmove 4s linear infinite;
+}
+
+@keyframes dashmove {
+  0%, 100% { border-top-color: #dbe5e8; }
+  50% { border-top-color: #aee1a3; }
+}
+
+.profile-pic {
+  width: 20vh;
+  height: 20vh;
+  margin-top: 10vh;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  border: 0.5vh solid #dbe5e8;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center center;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 3vh #aee1a3;
+}
+
+.card {
+  background-color: #3d4a50;
+  max-width: 60vh;
+  height: auto;
+  width: fit-content;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 2vh;
+  margin-top: 10vh;
+  border-left: 0.5vh solid #aee1a3;
+  border-bottom: 0.3vh solid #aee1a3;
+  animation: fadein 1.5s ease-in;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(2vh); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.typingContainer {
+  font-size: 24px;
+  white-space: normal;
+  word-wrap: break-word;
+  width: 300px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.7s steps(1) infinite;
+  color: #0f0;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
